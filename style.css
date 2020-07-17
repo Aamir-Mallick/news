@@ -18,7 +18,7 @@ body{
     height: 120px;	
 	background-color: #FEFEFE;
 	margin-top: 3px;
-
+    
 }
 
 #news {
@@ -43,39 +43,51 @@ body{
   border: none;
   border-bottom: 1px solid #F98F8F;
 }
-#news-articles {
-	list-style: none;
+
+
+.card-container {
+	display: flex;
+	flex-wrap: wrap;
+
 }
 
-#news-articles li {
-	display: inline;
-}
-
-.card {
-	display: inline-block;
-	width: 250px;
-	height: 350px;
-	border: 1px solid #F98F8F;
-	background-color: #FEFEFE;
-	overflow: auto;
-	margin-left: auto;
-	margin-right: auto;
-	margin-right: 70px;
-	margin-top: 20px;
+.article {
 	border-radius: 5px;
+	box-shadow: 0px 0px 2px 5px #B03217;
+	width: 260px;
+	margin: 20px auto;
+         	
+	height: 400px;
+	background-color: #FEFEFE;
 }
 
-.card img {
-	width: 240px;
+
+
+.article-img {
+	width: 259px;
+	height: 100px;
 }
 
 .article-title {
 	text-align: center;
 	font-family: sans-serif;
+	height: 60px;
+	max-width: 259px;
+	max-height: 90px;
+	
+	font-weight: bold;
+	overflow: hidden;
 }
 .article-description {
+	margin-top: 10px;
 	text-align: center;
-	font-family: sans-serif;
+	font-family: cursive;
+	height: 170px;
+	max-width: 259px;
+	max-height: 170px;
+
+	margin-bottom: 10px;
+	overflow: hidden;
 }
 .article-link {
 	width: 40px;
@@ -89,6 +101,6 @@ body{
 	font-weight: bold;
 }
 
-.card:hover {
+.article:hover {
    background-color: #F47676;
 }

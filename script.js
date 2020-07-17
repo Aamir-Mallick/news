@@ -18,7 +18,7 @@ async function fetchNewsApi(fill) {
 
 document.getElementById('loading').style.display = "";
 
-let url = await `https://newsapi.org/v2/everything?q=${fill}&from=2020-02-15&to=2020-02-15&sortBy=popularity&apiKey=ee6b965b04b94b2d8376bfae914af2be`;
+let url = await `https://newsapi.org/v2/everything?q=${fill}&apiKey=ee6b965b04b94b2d8376bfae914af2be`;
 const response = await fetch(url);
 const data = await response.json();
 console.log(data);
@@ -30,15 +30,15 @@ console.log(data);
 ${data.articles.map(function(x) {
 
      return `
-           <li class="article">
-             <div class="card">
+           <div class="article">
+              
               <img src="${x.urlToImage}" alt="..." class="article-img"><br/>
-              <h2 class="article-title">${x.title}</h2>
-              <p class="article-description">${x.description}</p>
+              <div class="article-title">${x.title}</div>
+              <div class="article-description">${x.description}</div>
               <span class="article-author">${x.author}</span>
               <a class="article-link" href="${x.url}">Go for full article</a>
-            </div>    
-           </li>
+              
+           </div>
  `
     }).join('') }
   
